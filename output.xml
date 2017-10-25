@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20171025 19:05:17.943" generator="Robot 3.0.1 (Python 2.7.10rc1 on darwin)">
+<suite source="/Users/Belinda/workspace/robot-handigo/handigo_ui.robot" id="s1" name="Handigo Ui">
+<kw type="setup" name="User is open dashboard" library="handigo_ui_keyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>${DELAY}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:18.243" level="INFO">Opening browser 'chrome' to base url 'https://servicetest.handigo.run'</msg>
+<status status="PASS" endtime="20171025 19:05:25.392" starttime="20171025 19:05:18.242"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=email</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:25.394" level="INFO">Typing text 'testhotel@mail.com' into text field 'name=email'</msg>
+<status status="PASS" endtime="20171025 19:05:26.807" starttime="20171025 19:05:25.393"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:26.808" level="INFO">Typing password into text field 'name=password'</msg>
+<status status="PASS" endtime="20171025 19:05:27.116" starttime="20171025 19:05:26.808"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=label.checkbox-custom-label</arg>
+</arguments>
+<msg timestamp="20171025 19:05:27.116" level="INFO">Clicking element 'css=label.checkbox-custom-label'.</msg>
+<status status="PASS" endtime="20171025 19:05:27.386" starttime="20171025 19:05:27.116"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=submit-login</arg>
+</arguments>
+<msg timestamp="20171025 19:05:27.387" level="INFO">Clicking element 'id=submit-login'.</msg>
+<status status="PASS" endtime="20171025 19:05:27.570" starttime="20171025 19:05:27.386"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=div.main-layout</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:05:28.461" starttime="20171025 19:05:27.570"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>css=div.main-layout</arg>
+</arguments>
+<msg timestamp="20171025 19:05:28.462" level="INFO">Verifying element 'css=div.main-layout' is visible.</msg>
+<status status="PASS" endtime="20171025 19:05:28.539" starttime="20171025 19:05:28.461"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:05:28.544" starttime="20171025 19:05:28.539"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:28.544" starttime="20171025 19:05:18.241"></status>
+</kw>
+<test id="s1-t1" name="[2] User click hotel setting menu">
+<kw name="Given User click menu 'setting-hotel-menu' page" library="handigo_ui_keyword">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>id=${id_menu}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:28.548" level="INFO">Clicking link 'id=setting-hotel-menu'.</msg>
+<status status="PASS" endtime="20171025 19:05:30.501" starttime="20171025 19:05:28.547"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:30.501" starttime="20171025 19:05:28.546"></status>
+</kw>
+<kw name="When Setting hotel is open" library="handigo_ui_keyword">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>name=setting-hotel-form</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:05:31.603" starttime="20171025 19:05:30.503"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>name=setting-hotel-form</arg>
+</arguments>
+<msg timestamp="20171025 19:05:31.605" level="INFO">Verifying element 'name=setting-hotel-form' is visible.</msg>
+<status status="PASS" endtime="20171025 19:05:32.649" starttime="20171025 19:05:31.604"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:32.649" starttime="20171025 19:05:30.502"></status>
+</kw>
+<kw name="Then User click menu 'dashboard-menu' page" library="handigo_ui_keyword">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>id=${id_menu}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:32.652" level="INFO">Clicking link 'id=dashboard-menu'.</msg>
+<status status="PASS" endtime="20171025 19:05:34.457" starttime="20171025 19:05:32.651"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:34.458" starttime="20171025 19:05:32.650"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:34.458" critical="yes" starttime="20171025 19:05:28.544"></status>
+</test>
+<test id="s1-t2" name="[3] User send broadcast Banana cake for room A10">
+<kw name="Given User click menu 'broadcast-menu' page" library="handigo_ui_keyword">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>id=${id_menu}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:34.463" level="INFO">Clicking link 'id=broadcast-menu'.</msg>
+<status status="PASS" endtime="20171025 19:05:36.177" starttime="20171025 19:05:34.463"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:36.177" starttime="20171025 19:05:34.462"></status>
+</kw>
+<kw name="When Broadcast is open" library="handigo_ui_keyword">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=broadcast-page</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:05:37.273" starttime="20171025 19:05:36.179"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>id=broadcast-page</arg>
+</arguments>
+<msg timestamp="20171025 19:05:37.274" level="INFO">Verifying element 'id=broadcast-page' is visible.</msg>
+<status status="PASS" endtime="20171025 19:05:38.318" starttime="20171025 19:05:37.274"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY_DIALOG}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:05:38.320" starttime="20171025 19:05:38.319"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:38.320" starttime="20171025 19:05:36.178"></status>
+</kw>
+<kw name="And User select broadcast 'send-broadcast-117'" library="handigo_ui_keyword">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=${broadcast_id}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:38.322" level="INFO">Clicking button 'id=send-broadcast-117'.</msg>
+<status status="PASS" endtime="20171025 19:05:39.507" starttime="20171025 19:05:38.321"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY_DIALOG}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:05:39.508" starttime="20171025 19:05:39.508"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:39.509" starttime="20171025 19:05:38.320"></status>
+</kw>
+<kw name="And User select room for broadcast 'roomSelectionItem-80'" library="handigo_ui_keyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=${room_id}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:39.511" level="INFO">Clicking element 'id=roomSelectionItem-80'.</msg>
+<status status="PASS" endtime="20171025 19:05:40.089" starttime="20171025 19:05:39.510"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:40.090" starttime="20171025 19:05:39.509"></status>
+</kw>
+<kw name="Then User is submit button 'submit-broadcast-room'" library="handigo_ui_keyword">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=${button_id}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:40.092" level="INFO">Clicking button 'id=submit-broadcast-room'.</msg>
+<status status="PASS" endtime="20171025 19:05:41.281" starttime="20171025 19:05:40.091"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY_CALL_API}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:05:41.282" starttime="20171025 19:05:41.281"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:41.282" starttime="20171025 19:05:40.090"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:41.282" critical="yes" starttime="20171025 19:05:34.460"></status>
+</test>
+<test id="s1-t3" name="[3] User send broadcast Mx Coffee for room A1, A10">
+<kw name="Given User select broadcast 'send-broadcast-98'" library="handigo_ui_keyword">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=${broadcast_id}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:41.286" level="INFO">Clicking button 'id=send-broadcast-98'.</msg>
+<status status="PASS" endtime="20171025 19:05:46.541" starttime="20171025 19:05:41.285"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY_DIALOG}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:05:46.542" starttime="20171025 19:05:46.541"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:46.542" starttime="20171025 19:05:41.285"></status>
+</kw>
+<kw name="When User select room for broadcast 'roomSelectionItem-80'" library="handigo_ui_keyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=${room_id}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:46.544" level="INFO">Clicking element 'id=roomSelectionItem-80'.</msg>
+<status status="PASS" endtime="20171025 19:05:47.129" starttime="20171025 19:05:46.543"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:47.129" starttime="20171025 19:05:46.543"></status>
+</kw>
+<kw name="And User select room for broadcast 'roomSelectionItem-71'" library="handigo_ui_keyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=${room_id}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:47.131" level="INFO">Clicking element 'id=roomSelectionItem-71'.</msg>
+<status status="PASS" endtime="20171025 19:05:47.737" starttime="20171025 19:05:47.130"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:47.738" starttime="20171025 19:05:47.130"></status>
+</kw>
+<kw name="Then User is submit button 'submit-broadcast-room'" library="handigo_ui_keyword">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=${button_id}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:47.741" level="INFO">Clicking button 'id=submit-broadcast-room'.</msg>
+<status status="PASS" endtime="20171025 19:05:48.939" starttime="20171025 19:05:47.740"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY_CALL_API}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:05:48.941" starttime="20171025 19:05:48.940"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:48.942" starttime="20171025 19:05:47.739"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:48.942" critical="yes" starttime="20171025 19:05:41.283"></status>
+</test>
+<test id="s1-t4" name="[4] User send broadcast Test image for all room">
+<kw name="Given User select broadcast 'send-broadcast-86'" library="handigo_ui_keyword">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=${broadcast_id}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:48.946" level="INFO">Clicking button 'id=send-broadcast-86'.</msg>
+<status status="PASS" endtime="20171025 19:05:54.208" starttime="20171025 19:05:48.945"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY_DIALOG}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:05:54.209" starttime="20171025 19:05:54.208"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:54.209" starttime="20171025 19:05:48.945"></status>
+</kw>
+<kw name="When User select room for broadcast 'room-select-all'" library="handigo_ui_keyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=${room_id}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:54.212" level="INFO">Clicking element 'id=room-select-all'.</msg>
+<status status="PASS" endtime="20171025 19:05:54.833" starttime="20171025 19:05:54.211"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:54.833" starttime="20171025 19:05:54.210"></status>
+</kw>
+<kw name="Then User is submit button 'submit-broadcast-room'" library="handigo_ui_keyword">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=${button_id}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:54.835" level="INFO">Clicking button 'id=submit-broadcast-room'.</msg>
+<status status="PASS" endtime="20171025 19:05:55.948" starttime="20171025 19:05:54.834"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY_CALL_API}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:05:55.949" starttime="20171025 19:05:55.949"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:55.950" starttime="20171025 19:05:54.834"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:55.951" critical="yes" starttime="20171025 19:05:48.943"></status>
+</test>
+<test id="s1-t5" name="[5] User has edit broadcast">
+<kw name="Given User click menu 'broadcast-menu' page" library="handigo_ui_keyword">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>id=${id_menu}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:55.956" level="INFO">Clicking link 'id=broadcast-menu'.</msg>
+<status status="PASS" endtime="20171025 19:05:59.245" starttime="20171025 19:05:55.955"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:05:59.246" starttime="20171025 19:05:55.954"></status>
+</kw>
+<kw name="When User select item for edit 'edit-broadcast-121'" library="handigo_ui_keyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=${item_id}</arg>
+</arguments>
+<msg timestamp="20171025 19:05:59.247" level="INFO">Clicking element 'id=edit-broadcast-121'.</msg>
+<status status="PASS" endtime="20171025 19:06:01.531" starttime="20171025 19:05:59.247"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:06:01.531" starttime="20171025 19:05:59.246"></status>
+</kw>
+<kw name="And User is open form broadcast page" library="handigo_ui_keyword">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=broadcast-form-page</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:06:03.611" starttime="20171025 19:06:01.532"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>id=broadcast-form-page</arg>
+</arguments>
+<msg timestamp="20171025 19:06:03.612" level="INFO">Verifying element 'id=broadcast-form-page' is visible.</msg>
+<status status="PASS" endtime="20171025 19:06:05.650" starttime="20171025 19:06:03.612"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:06:05.651" starttime="20171025 19:06:01.532"></status>
+</kw>
+<kw name="And User can edit info 'test from Robot' and 'The description form robot test' in form" library="handigo_ui_keyword">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=title</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20171025 19:06:05.653" level="INFO">Typing text 'test from Robot' into text field 'name=title'</msg>
+<status status="PASS" endtime="20171025 19:06:09.249" starttime="20171025 19:06:05.653"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=description</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20171025 19:06:09.250" level="INFO">Typing text 'The description form robot test' into text field 'name=description'</msg>
+<status status="PASS" endtime="20171025 19:06:12.804" starttime="20171025 19:06:09.250"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:06:12.805" starttime="20171025 19:06:05.652"></status>
+</kw>
+<kw name="And User select tab 'contact' in menu" library="handigo_ui_keyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=${menu}</arg>
+</arguments>
+<msg timestamp="20171025 19:06:12.807" level="INFO">Clicking element 'id=contact'.</msg>
+<status status="PASS" endtime="20171025 19:06:15.031" starttime="20171025 19:06:12.806"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:06:15.032" starttime="20171025 19:06:12.805"></status>
+</kw>
+<kw name="And User can edit contact service time: '10.00am - 08.00pm', phone number: '0998889999', website: 'http://test.com', email: 'test@test.com', address: 'Milan, Italy' in form" library="handigo_ui_keyword">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=open_hours</arg>
+<arg>${open_hours}</arg>
+</arguments>
+<msg timestamp="20171025 19:06:15.035" level="INFO">Typing text '10.00am - 08.00pm' into text field 'name=open_hours'</msg>
+<status status="PASS" endtime="20171025 19:06:18.482" starttime="20171025 19:06:15.034"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=phone</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20171025 19:06:18.483" level="INFO">Typing text '0998889999' into text field 'name=phone'</msg>
+<status status="PASS" endtime="20171025 19:06:21.810" starttime="20171025 19:06:18.483"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20171025 19:06:21.811" level="INFO">Typing text 'test@test.com' into text field 'name=email'</msg>
+<status status="PASS" endtime="20171025 19:06:25.238" starttime="20171025 19:06:21.810"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=website</arg>
+<arg>${website}</arg>
+</arguments>
+<msg timestamp="20171025 19:06:25.239" level="INFO">Typing text 'http://test.com' into text field 'name=website'</msg>
+<status status="PASS" endtime="20171025 19:06:28.589" starttime="20171025 19:06:25.239"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=address</arg>
+<arg>${address}</arg>
+</arguments>
+<msg timestamp="20171025 19:06:28.590" level="INFO">Typing text 'Milan, Italy' into text field 'name=address'</msg>
+<status status="PASS" endtime="20171025 19:06:31.929" starttime="20171025 19:06:28.589"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:06:31.930" starttime="20171025 19:06:15.034"></status>
+</kw>
+<kw name="Then User is submit button 'submit-contact-form'" library="handigo_ui_keyword">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=${button_id}</arg>
+</arguments>
+<msg timestamp="20171025 19:06:31.932" level="INFO">Clicking button 'id=submit-contact-form'.</msg>
+<status status="PASS" endtime="20171025 19:06:37.180" starttime="20171025 19:06:31.931"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY_CALL_API}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 19:06:37.182" starttime="20171025 19:06:37.181"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:06:37.182" starttime="20171025 19:06:31.930"></status>
+</kw>
+<status status="PASS" endtime="20171025 19:06:37.182" critical="yes" starttime="20171025 19:05:55.952"></status>
+</test>
+<test id="s1-t6" name="[6] User has edit broadcast choose Korean language">
+<kw name="Given User select language 'lang-ko'" library="handigo_ui_keyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=${language_code}</arg>
+</arguments>
+<msg timestamp="20171025 19:06:37.186" level="INFO">Clicking element 'id=lang-ko'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20171025 19:06:48.442" level="FAIL">WebDriverException: Message: unknown error: cannot get automation extension
+from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64)
+</msg>
+<status status="FAIL" endtime="20171025 19:06:48.442" starttime="20171025 19:06:38.366"></status>
+</kw>
+<msg timestamp="20171025 19:06:48.442" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: unknown error: cannot get automation extension
+from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64)
+</msg>
+<msg timestamp="20171025 19:06:48.445" level="FAIL">ValueError: Element locator 'id=lang-ko' did not match any elements.</msg>
+<status status="FAIL" endtime="20171025 19:06:48.446" starttime="20171025 19:06:37.185"></status>
+</kw>
+<status status="FAIL" endtime="20171025 19:06:48.446" starttime="20171025 19:06:37.184"></status>
+</kw>
+<status status="FAIL" endtime="20171025 19:06:48.447" critical="yes" starttime="20171025 19:06:37.183">ValueError: Element locator 'id=lang-ko' did not match any elements.</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" endtime="20171025 19:06:48.449" starttime="20171025 19:05:17.946"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="5">Critical Tests</stat>
+<stat fail="1" pass="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Handigo Ui" pass="5">Handigo Ui</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20171025 19:06:48.442" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: unknown error: cannot get automation extension
+from unknown error: page could not be found: chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb/_generated_background_page.html
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64)
+</msg>
+</errors>
+</robot>
