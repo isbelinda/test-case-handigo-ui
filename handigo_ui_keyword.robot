@@ -5,8 +5,8 @@ Library         Selenium2Library
 
 
 *** Variables ***
-${BASE_URL}         https://servicetest.handigo.run
-#${BASE_URL}         http://localhost:3000
+#${BASE_URL}         https://servicetest.handigo.run
+${BASE_URL}         http://localhost:3000
 ${DELAY}            0.5
 ${DELAY_DIALOG}     0.20
 ${DELAY_CALL_API}   1
@@ -91,6 +91,9 @@ User can search location '${location}'
 
 User select language '${language_code}'
     click element       id=${language_code}
+
+User should see result is success
+    wait until element is visible           css=div.toastify-content--success
 
 Close Browser After Finish
     set selenium speed  ${DELAY}
