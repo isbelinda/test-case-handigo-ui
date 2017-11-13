@@ -41,9 +41,10 @@ Suite Setup     User is open dashboard
 
 [5] User has edit broadcast
     Given User click menu 'broadcast-menu' page
-    When User select item for edit 'edit-broadcast-121'
+    When User select item for edit 'edit-broadcast-128'
     And User is open form broadcast page
     And User can edit info 'test from Robot' and 'The description form robot test' in form
+    And User click disable or enable 'enabledCallInfo-broadcast'
     And User select tab 'contact' in menu
     And User can edit contact service time: '10.00am - 08.00pm', phone number: '0998889999', website: 'http://test.com', email: 'test@test.com', address: 'Milan, Italy' in form
     And User is submit button 'submit-contact-form'
@@ -55,5 +56,15 @@ Suite Setup     User is open dashboard
     And User select tab 'info' in menu
     And User can edit info '로봇 테스트' and '설명 형식 로봇 테스트' in form
     And User is submit button 'submit-broadcast-form'
-    Then User should see result is success
+    And User should see result is success
+    then User click menu 'dashboard-menu' page
 
+#[7] User has add broadcast
+#    Given User click menu 'broadcast-menu' page
+#    When User click button 'add-broadcast'
+#    And User is open form broadcast page
+#    And User can edit info 'Create by Robot' and 'The description form Robot' in form
+#    And User select tab 'contact' in menu
+#    And User can edit contact service time: '10.00am - 08.00pm', phone number: '0998889999', website: 'http://robot.com', email: 'robot@example.com', address: 'Milan, Italy' in form
+#    And User is submit button 'submit-contact-form'
+#    Then User should see result is success

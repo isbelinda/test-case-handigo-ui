@@ -43,6 +43,9 @@ Dashboard page is open
 User click menu '${id_menu}' page
     click link          id=${id_menu}
 
+User click button '${button_name}'
+    click button        id=${button_name}
+
 
 Setting hotel is open
     wait until element is visible           name=setting-hotel-form
@@ -66,6 +69,9 @@ User select room for broadcast '${room_id}'
 
 User select item for edit '${item_id}'
     click element       id=${item_id}
+
+User click disable or enable '${toggle_id}'
+    click element       id=${toggle_id}
 
 
 User is open form broadcast page
